@@ -64,4 +64,4 @@ Figma is for designing. To put Figma changes on the live site, send Claude scree
 
 ## Still on the to-do list
 
-- [ ] Replace the blurry Expo event poster with a full-size export (InDesign: File → Export → JPEG at 150 ppi or higher).
+- [ ] Fix the typo "Resouce" (should be "Resource") in the Rock Wall panel of the Expo mailer, then send Claude the new PDF.
