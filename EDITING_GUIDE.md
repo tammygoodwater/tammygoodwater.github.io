@@ -64,4 +64,4 @@ Figma is for designing. To put Figma changes on the live site, send Claude scree
 
 ## Still on the to-do list
 
-- [ ] Fix the typo "Resouce" (should be "Resource") in the Rock Wall panel of the Expo mailer, then send Claude the new PDF.
+- [ ] Expo social graphic: the web address was corrected to OUTDOORNEBRASKA.GOV on the website copy only. Fix it in the original design file too.
