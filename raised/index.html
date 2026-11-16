@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raised: Fundraising Graphics for Nonprofits</title>
+<meta name="description" content="Make polished fundraising progress graphics for Instagram, Facebook and Stories in seconds. Built for nonprofits.">
+<meta name="theme-color" content="#00B2BD">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Raised">
+<meta property="og:title" content="Raised: Fundraising Graphics for Nonprofits">
+<meta property="og:description" content="Show donors how close you are to your goal with a polished progress graphic.">
+<meta property="og:image" content="icons/icon-512.png">
+<style>
+:root{
+  --teal:#00B2BD; --teal-dark:#0B6E75; --teal-ink:#0D3B40; --mist:#E8F6F7;
+  --charcoal:#1E272B; --gray:#4B5A60; --line:#D5E2E4; --white:#FFFFFF; --gold:#F2B33D;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--charcoal);background:var(--white);font-size:16px;line-height:1.5}
+a{color:var(--teal-dark)}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+header.top{background:var(--teal);color:var(--charcoal)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding-top:max(0px,env(safe-area-inset-top))}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:-.5px;text-decoration:none;color:var(--charcoal)}
+.brand img{width:34px;height:34px;border-radius:9px}
+.pro-badge{display:none;padding:4px 10px;border-radius:999px;background:var(--charcoal);color:var(--white);font-size:12px;font-weight:700;letter-spacing:1.5px}
+body.is-pro .pro-badge{display:inline-block}
+body.is-pro .free-only{display:none!important}
+
+.hero{background:var(--teal);padding:8px 0 28px}
+.hero h1{margin:0 0 8px;font-size:clamp(28px,4.5vw,44px);line-height:1.05;letter-spacing:-1px;max-width:720px}
+.hero p{margin:0;font-size:18px;max-width:640px;color:var(--teal-ink)}
+
+main .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;padding-top:24px;padding-bottom:48px}
+@media (min-width:900px){
+  main .wrap{grid-template-columns:minmax(0,420px) minmax(0,1fr);align-items:start}
+  .preview-col{position:sticky;top:16px;order:2}
+  .form-col{order:1}
+}
+
+.card{border:1.5px solid var(--line);border-radius:16px;padding:18px;background:var(--white)}
+.card + .card{margin-top:16px}
+.card h2{margin:0 0 12px;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal-dark)}
+label{display:block;font-size:14px;font-weight:700;margin:0 0 4px}
+.field{margin-bottom:14px}
+.field:last-child{margin-bottom:0}
+.hint{font-weight:400;color:var(--gray);font-size:13px}
+input[type=text],input[type=number],input[type=url],select{width:100%;min-height:46px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--white);font-size:16px}
+input:focus,select:focus,button:focus-visible{outline:3px solid var(--teal);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.choices.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:58px;padding:8px;border:1.5px solid var(--line);border-radius:10px;text-align:center;font-size:14px;font-weight:700;cursor:pointer;line-height:1.2}
+.choice small{font-weight:400;color:var(--gray);font-size:12px}
+.choice input:checked + span{border-color:var(--teal-dark);background:var(--mist);box-shadow:inset 0 0 0 1.5px var(--teal-dark)}
+.choice input:focus-visible + span{outline:3px solid var(--teal);outline-offset:1px}
+.lock{display:inline-block;margin-left:4px;padding:1px 6px;border-radius:999px;background:var(--charcoal);color:var(--white);font-size:10px;letter-spacing:1px;vertical-align:1px}
+body.is-pro .lock{display:none}
+
+.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.swatch{width:44px;height:44px;border-radius:50%;border:3px solid var(--white);box-shadow:0 0 0 1.5px var(--line);cursor:pointer;padding:0}
+.swatch[aria-pressed=true]{box-shadow:0 0 0 3px var(--charcoal)}
+.colors{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.colors label{font-size:12px;font-weight:700;color:var(--gray)}
+input[type=color]{width:100%;height:44px;border:1.5px solid var(--line);border-radius:10px;padding:3px;background:var(--white);cursor:pointer}
+
+.logo-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;border:0;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none}
+.btn.primary{background:var(--charcoal);color:var(--white)}
+.btn.teal{background:var(--teal);color:var(--charcoal)}
+.btn.ghost{background:var(--white);border:1.5px solid var(--line);color:var(--charcoal)}
+.btn.small{min-height:40px;padding:0 16px;font-size:14px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+.preview-box{background:var(--mist);border-radius:16px;padding:16px;display:flex;justify-content:center}
+#canvas{display:block;width:auto;height:auto;max-width:100%;max-height:70vh;border-radius:6px;box-shadow:0 10px 30px rgba(13,59,64,.18);background:var(--white)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.actions .btn{flex:1 1 180px}
+.note{font-size:13px;color:var(--gray);margin:10px 0 0}
+
+.pricing{background:var(--charcoal);color:var(--white);border-color:var(--charcoal)}
+.pricing h2{color:#5FD3DA}
+.pricing .price{font-size:38px;font-weight:800;letter-spacing:-1px;line-height:1}
+.pricing .price small{font-size:14px;font-weight:400;color:#B9C7C9;letter-spacing:0}
+.pricing ul{margin:12px 0 16px;padding-left:20px;color:#DCE6E7}
+.pricing li{margin:4px 0}
+.code-row{display:flex;gap:8px;margin-top:12px}
+.code-row input{flex:1;min-width:0}
+.pricing input{background:#2B373C;border-color:#43535A;color:var(--white)}
+.pricing a{color:#5FD3DA}
+
+dialog{border:0;border-radius:18px;padding:24px;max-width:420px;width:calc(100% - 32px);color:var(--charcoal)}
+dialog::backdrop{background:rgba(30,39,43,.6)}
+dialog h3{margin:0 0 8px;font-size:24px;letter-spacing:-.5px}
+dialog p{margin:0 0 16px;color:var(--gray)}
+dialog .actions{margin-top:0}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(120px);background:var(--charcoal);color:var(--white);padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;transition:transform .25s,opacity .25s;opacity:0;z-index:10;max-width:calc(100% - 32px);text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+#installBtn{display:none}
+footer{border-top:1.5px solid var(--line);padding:20px 0 calc(20px + env(safe-area-inset-bottom));font-size:13px;color:var(--gray)}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icons/icon-192.png" alt="">Raised <span class="pro-badge">PRO</span></a>
+    <button class="btn small primary" id="installBtn" type="button">Install app</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Show donors how close you are.</h1>
+    <p>Make a polished fundraising progress graphic for Instagram, Facebook or Stories in under a minute. No design skills needed.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <!-- ========== PREVIEW ========== -->
+    <div class="preview-col">
+      <div class="preview-box"><canvas id="canvas" width="1080" height="1080" role="img" aria-label="Preview of your fundraising graphic"></canvas></div>
+      <div class="actions">
+        <button class="btn primary" id="downloadBtn" type="button">Download image</button>
+        <button class="btn ghost" id="shareBtn" type="button" hidden>Share</button>
+      </div>
+      <p class="note free-only">Free graphics include a small “Made with Raised” label. <a href="#pricing">Remove it with Pro.</a></p>
+    </div>
+
+    <!-- ========== FORM ========== -->
+    <div class="form-col">
+      <form id="form" autocomplete="off" onsubmit="return false">
+        <div class="card">
+          <h2>1. Your campaign</h2>
+          <div class="field"><label for="org">Organization name</label><input type="text" id="org" name="org" maxlength="60"></div>
+          <div class="field"><label for="title">Campaign name</label><input type="text" id="title" name="title" maxlength="70"></div>
+          <div class="row">
+            <div class="field"><label for="raised">Raised so far</label><input type="number" id="raised" name="raised" min="0" step="1" inputmode="decimal"></div>
+            <div class="field"><label for="goal">Goal</label><input type="number" id="goal" name="goal" min="1" step="1" inputmode="decimal"></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="donors">Donors <span class="hint">(optional)</span></label><input type="number" id="donors" name="donors" min="0" step="1" inputmode="numeric"></div>
+            <div class="field"><label for="currency">Currency</label>
+              <select id="currency" name="currency">
+                <option value="USD">$ USD</option><option value="CAD">$ CAD</option><option value="EUR">€ EUR</option><option value="GBP">£ GBP</option><option value="AUD">$ AUD</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="deadline">Deadline or note <span class="hint">(optional, e.g. “Ends Dec 31”)</span></label><input type="text" id="deadline" name="deadline" maxlength="40"></div>
+          <div class="field"><label for="cta">Where to give <span class="hint">(optional, e.g. “Give at riverfriends.org”)</span></label><input type="text" id="cta" name="cta" maxlength="50"></div>
+        </div>
+
+        <div class="card">
+          <h2>2. Size</h2>
+          <div class="choices three" role="radiogroup" aria-label="Size">
+            <label class="choice"><input type="radio" name="size" value="square" checked><span>Post<small>1080 × 1080</small></span></label>
+            <label class="choice"><input type="radio" name="size" value="story"><span>Story<small>1080 × 1920</small></span></label>
+            <label class="choice"><input type="radio" name="size" value="wide"><span>Facebook<small>1200 × 630</small></span></label>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>3. Style</h2>
+          <div class="choices" role="radiogroup" aria-label="Style">
+            <label class="choice"><input type="radio" name="style" value="bar" checked><span>Progress bar</span></label>
+            <label class="choice"><input type="radio" name="style" value="ring"><span>Ring</span></label>
+            <label class="choice"><input type="radio" name="style" value="thermometer"><span>Thermometer <i class="lock">PRO</i></span></label>
+            <label class="choice"><input type="radio" name="style" value="milestones"><span>Milestones <i class="lock">PRO</i></span></label>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>4. Colors &amp; logo</h2>
+          <div class="swatches" id="swatches" aria-label="Color themes"></div>
+          <div class="colors">
+            <div><label for="bg">Background</label><input type="color" id="bg" name="bg"></div>
+            <div><label for="fill">Progress</label><input type="color" id="fill" name="fill"></div>
+            <div><label for="track">Track</label><input type="color" id="track" name="track"></div>
+          </div>
+          <div class="field" style="margin-top:14px">
+            <label>Logo <i class="lock">PRO</i> <span class="hint">PNG with a transparent background looks best</span></label>
+            <div class="logo-row">
+              <label class="btn ghost small" for="logoFile" style="margin:0">Choose logo</label>
+              <input type="file" id="logoFile" accept="image/*" hidden>
+              <button type="button" class="btn ghost small" id="logoClear" hidden>Remove</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- ========== PRICING ========== -->
+      <div class="card pricing free-only" id="pricing">
+        <h2>Raised Pro</h2>
+        <div class="price"><span data-price></span> <small data-price-note></small></div>
+        <ul>
+          <li>No “Made with Raised” label</li>
+          <li>Add your organization’s logo</li>
+          <li>Thermometer and Milestones styles</li>
+          <li>Every future style we add</li>
+        </ul>
+        <button class="btn teal" type="button" data-upgrade style="width:100%">Upgrade to Pro</button>
+        <div class="code-row">
+          <input type="text" id="codeInput" placeholder="Have an unlock code?" aria-label="Unlock code">
+          <button class="btn ghost small" type="button" id="codeBtn">Unlock</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Raised is designed by <a href="../">Tammy Goodwater</a>, graphic designer for nonprofits. <span id="contactLine"></span><br>Your numbers and logo stay on your device. Nothing is uploaded.</div>
+</footer>
+
+<dialog id="upgradeDialog">
+  <h3>That’s a Pro feature</h3>
+  <p id="upgradeReason">Upgrade to download this graphic.</p>
+  <div class="actions">
+    <button class="btn teal" type="button" data-upgrade>Upgrade for <span data-price></span></button>
+    <button class="btn ghost" type="button" id="dialogClose">Not now</button>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
