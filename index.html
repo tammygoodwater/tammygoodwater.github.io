@@ -16,6 +16,7 @@
   --teal-light:#5FD3DA;  /* teal text on charcoal */
   --teal-ink:#0D3B40;    /* dark teal text on bright teal */
   --mist:#E8F6F7;        /* light teal section backgrounds */
+  --blush:#F7EFEA;       /* soft warm blush section backgrounds (from the portfolio book) */
   --charcoal:#1E272B;    /* main text and dark sections */
   --gray:#4B5A60;        /* body copy */
   --gray-light:#B9C7C9;  /* text on charcoal */
@@ -29,6 +30,7 @@ html{scroll-behavior:smooth}
 .btn{display:inline-flex;align-items:center;min-height:50px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none}
 .sec{position:relative;padding:104px 0}
 .sec-mist{background:var(--mist)}
+.sec-blush{background:var(--blush)}
 .sec-dark{background:var(--charcoal);color:#FFFFFF}
 .sec-teal{background:var(--teal);color:var(--charcoal)}
 .head{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end;margin-bottom:44px}
@@ -36,6 +38,10 @@ html{scroll-behavior:smooth}
 .kicker{margin:0 0 8px;font-size:13px;font-weight:700;letter-spacing:2.5px;color:var(--teal-dark)}
 .sec-dark .kicker{color:var(--teal-light)}
 .sec-teal .kicker{color:var(--teal-ink)}
+/* Project type (Client Work / Academic Project / Personal Identity), shown after the category */
+.ptype{color:var(--gray)}
+.sec-dark .ptype{color:var(--gray-light)}
+.sec-teal .ptype{color:var(--charcoal)}
 .h2{margin:0 0 14px;font-weight:700;font-size:clamp(32px,3.8vw,48px);line-height:1.04;letter-spacing:-1px}
 .bar{width:72px;height:7px;border-radius:4px;background:var(--accent);margin:0 0 20px}
 .client{margin:0 0 6px;font-size:14px;font-weight:700}
@@ -102,7 +108,7 @@ html{scroll-behavior:smooth}
         <a href="#work" style="color: var(--charcoal); text-decoration: none; padding: 10px 0">Work</a>
         <a href="#about" style="color: var(--charcoal); text-decoration: none; padding: 10px 0">About</a>
         <a href="#contact" style="color: var(--charcoal); text-decoration: none; padding: 10px 0">Contact</a>
-        <a href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="min-height: 42px; padding: 0 20px; background: var(--charcoal); color: #FFFFFF; font-size: 14px">Résumé (PDF)</a>
+        <a href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="min-height: 42px; padding: 0 20px; background: var(--charcoal); color: #FFFFFF; font-size: 14px">Resume (PDF)</a>
       </nav>
     </div>
   </header>
@@ -119,17 +125,17 @@ html{scroll-behavior:smooth}
     <div class="wrap" style="position: relative; padding-top: 48px; padding-bottom: 104px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
       <div style="flex: 1 1 460px; min-width: 0">
         <p class="rise" style="margin: 0 0 20px; display: inline-block; padding: 7px 14px; border-radius: 999px; background: var(--charcoal); color: #FFFFFF; font-size: 13px; font-weight: 700; letter-spacing: 2px">PORTFOLIO 2026</p>
-        <h1 class="rise d1" style="margin: 0 0 24px; font-weight: 700; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -2px; color: var(--charcoal)">I turn a lot of information into design people want to read.</h1>
+        <h1 class="rise d1" style="margin: 0 0 24px; font-weight: 700; font-size: clamp(44px, 6vw, 80px); line-height: 1; letter-spacing: -2px; color: var(--charcoal)">Thoughtful, well-organized design.</h1>
         <p class="rise d2" style="margin: 0 0 34px; font-size: 20px; line-height: 1.55; color: var(--charcoal); max-width: 540px">Publication design, branding and digital design for nonprofits, community and outdoor organizations, and small businesses.</p>
         <div class="rise d3" style="display: flex; flex-wrap: wrap; gap: 12px">
           <a href="#work" class="btn" style="background: var(--charcoal); color: #FFFFFF">View my work</a>
-          <a href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="border: 2px solid var(--charcoal); color: var(--charcoal)">Download résumé</a>
+          <a href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="border: 2px solid var(--charcoal); color: var(--charcoal)">Download resume</a>
         </div>
       </div>
       <div class="rise d2" style="flex: 1 1 460px; min-width: 0; position: relative; aspect-ratio: 1 / 0.92">
         <img class="f1" src="images/troutfin-laptop.jpg" alt="Trout Fin Resorts website on a laptop" style="position: absolute; right: 0; top: 2%; width: 74%; height: auto; border: 8px solid #FFFFFF; border-radius: 14px; box-shadow: 0 24px 50px rgba(13,59,64,.35)">
-        <img class="f2" src="images/bluetrek-bottle-tag.jpg" alt="Blue Trek hang tag on a water bottle" style="position: absolute; left: 0; top: 26%; width: 38%; height: auto; border: 8px solid #FFFFFF; border-radius: 14px; box-shadow: 0 24px 50px rgba(13,59,64,.35)">
-        <img class="f3" src="images/nebraskaland-magazine-mockup.jpg" alt="Nebraskaland Magazine held in a reader's hands" style="position: absolute; right: 3%; bottom: 0; width: 58%; height: auto; border: 8px solid #FFFFFF; border-radius: 14px; box-shadow: 0 24px 50px rgba(13,59,64,.35)">
+        <img class="f2" src="images/bluetrek-bottle-tag.jpg" alt="BlueTrek hang tag on a water bottle" style="position: absolute; left: 0; top: 26%; width: 38%; height: auto; border: 8px solid #FFFFFF; border-radius: 14px; box-shadow: 0 24px 50px rgba(13,59,64,.35)">
+        <img class="f3" src="images/nebraskaland-magazine-mockup.jpg" alt="NebraskaLand Magazine held in a reader's hands" style="position: absolute; right: 3%; bottom: 0; width: 58%; height: auto; border: 8px solid #FFFFFF; border-radius: 14px; box-shadow: 0 24px 50px rgba(13,59,64,.35)">
       </div>
     </div>
   </section>
@@ -143,7 +149,7 @@ html{scroll-behavior:smooth}
   </div>
 
   <!-- ==================== SELECTED WORK GRID (tiles link to each project) ==================== -->
-  <section id="work" class="sec">
+  <section id="work" class="sec sec-blush">
     <div class="wrap">
       <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 36px">
         <div>
@@ -153,25 +159,62 @@ html{scroll-behavior:smooth}
         <p style="margin: 0; font-size: 15px; color: var(--gray); max-width: 380px">Print, brand and digital work, shown the way people actually see it.</p>
       </div>
       <div class="bento">
-        <a href="#cabin-journal" class="tile t-big p1" style="--accent: #4E7D52"><img src="images/cabin-journal-mockup.jpg" alt=""><span class="tag"><b>01</b><span>The Cabin Journal</span></span></a>
-        <a href="#nebraskaland" class="tile t-wide p2" style="--accent: #C2541A"><img src="images/nebraskaland-magazine-mockup.jpg" alt="" style="object-position: 50% 40%"><span class="tag"><b>02</b><span>Nebraskaland Magazine</span></span></a>
-        <a href="#bluetrek" class="tile t-tall p3" style="--accent: #2F6EAA"><img src="images/bluetrek-bottle-tag.jpg" alt="" style="object-position: 50% 45%"><span class="tag"><b>03</b><span>Blue Trek Outdoors</span></span></a>
-        <a href="#trout-fin" class="tile p4" style="--accent: #C2453A"><img src="images/troutfin-phone.jpg" alt=""><span class="tag"><b>04</b><span>Trout Fin Resorts</span></span></a>
-        <a href="#expo" class="tile t-tall p5" style="--accent: #B85A22"><img src="images/expo-sign-mockup.jpg" alt="" style="object-position: 50% 35%"><span class="tag"><b>05</b><span>Missouri River Outdoor Expo</span></span></a>
-        <a href="#tippet" class="tile t-tall p6" style="--accent: var(--teal-dark)"><img src="images/tippet-cover-mockup.jpg" alt="" style="object-position: 50% 25%"><span class="tag"><b>06</b><span>The Tippet</span></span></a>
-        <a href="#carpapalooza" class="tile t-tall p7" style="--accent: #8A6A00"><img src="images/carpapalooza-poster-mockup.jpg" alt="" style="object-position: 50% 30%"><span class="tag"><b>07</b><span>Carpapalooza</span></span></a>
+        <a href="#tippet" class="tile t-big p1" style="--accent: var(--teal-dark)"><img src="images/tippet-cover-mockup.jpg" alt="" style="object-position: 50% 25%"><span class="tag"><b>01</b><span>The Tippet</span></span></a>
+        <a href="#cabin-journal" class="tile t-wide p2" style="--accent: #4E7D52"><img src="images/cabin-journal-mockup.jpg" alt=""><span class="tag"><b>02</b><span>The Cabin Journal</span></span></a>
+        <a href="#nebraskaland" class="tile t-tall p3" style="--accent: #C2541A"><img src="images/nebraskaland-magazine-mockup.jpg" alt="" style="object-position: 50% 40%"><span class="tag"><b>03</b><span>NebraskaLand Magazine</span></span></a>
+        <a href="#carpapalooza" class="tile p4" style="--accent: #8A6A00"><img src="images/carpapalooza-poster-mockup.jpg" alt="" style="object-position: 50% 30%"><span class="tag"><b>04</b><span>Carpapalooza</span></span></a>
+        <a href="#trout-fin" class="tile t-tall p5" style="--accent: #C2453A"><img src="images/troutfin-phone.jpg" alt=""><span class="tag"><b>05</b><span>Trout Fin Resorts</span></span></a>
+        <a href="#bluetrek" class="tile t-tall p6" style="--accent: #2F6EAA"><img src="images/bluetrek-bottle-tag.jpg" alt="" style="object-position: 50% 45%"><span class="tag"><b>06</b><span>BlueTrek Outdoors</span></span></a>
+        <a href="#expo" class="tile t-tall p7" style="--accent: #B85A22"><img src="images/expo-sign-mockup.jpg" alt="" style="object-position: 50% 35%"><span class="tag"><b>07</b><span>Missouri River Outdoor Expo</span></span></a>
         <a href="#self-brand" class="tile p8" style="--accent: var(--charcoal); background: var(--teal)"><img src="images/business-card-front.jpg" alt="" style="inset: 14% 8% auto 8%; width: 84%; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 12px 26px rgba(13,59,64,.3)"><span class="tag"><b>08</b><span>Self-brand</span></span></a>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROJECT 01: THE CABIN JOURNAL ==================== -->
-  <section id="cabin-journal" class="sec sec-mist" aria-labelledby="h-cabin" style="--accent: #4E7D52">
+  <!-- ==================== PROJECT 01: THE TIPPET ==================== -->
+  <section id="tippet" class="sec sec-mist" aria-labelledby="h-tippet" style="--accent: var(--teal)">
+    <div class="wrap">
+      <div class="head" style="align-items: flex-start">
+        <div style="flex: 1 1 360px; min-width: 0">
+          <p class="num" aria-hidden="true">01</p>
+          <p class="kicker">NEWSLETTER SYSTEM <span class="ptype">· CLIENT WORK</span></p>
+          <h2 id="h-tippet" class="h2">The Tippet</h2>
+          <div class="bar"></div>
+          <p class="client">Client: Cornhusker Fly Fishers · Role: Editor and designer</p>
+          <p class="lede">A recurring digital newsletter and communication system that keeps members informed, promotes events and presents club stories in a clear, engaging format.</p>
+          <div class="chips"><span>Publication design</span><span>Editorial layout</span><span>Email communication</span><span>Social media</span></div>
+          <figure class="fig" style="margin-top: 32px">
+            <div style="background: #FFFFFF; border-left: 6px solid var(--teal); border-radius: 14px; padding: 22px 24px; font-size: 15px; line-height: 1.6">
+              <p style="margin: 0 0 12px; font-size: 13px; color: var(--gray); border-bottom: 1px solid #C9E6E8; padding-bottom: 10px">Subject: The October issue of The Tippet is ready!</p>
+              <p style="margin: 0 0 10px">Hi CFF Members,</p>
+              <p style="margin: 0 0 10px">This month's newsletter includes upcoming club events, member news, fly fishing stories and other updates from Cornhusker Fly Fishers.</p>
+              <p style="margin: 0 0 10px"><strong>Read the current issue here:</strong><br><span style="color: var(--teal-dark); text-decoration: underline">cornhuskerflyfishers.com/current-newsletter</span></p>
+              <p style="margin: 0">Tight lines,<br><strong>Tammy Goodwater</strong><br>Editor, The Tippet</p>
+            </div>
+            <figcaption class="cap"><strong>Monthly member email.</strong> Introduces each issue and gives members one-click access.</figcaption>
+          </figure>
+        </div>
+        <div style="flex: 1.6 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+          <figure class="fig" style="flex: 1 1 260px">
+            <img src="images/tippet-cover-mockup.jpg" alt="A reader holding a printed issue of The Tippet, Volume 46 No. 9, at a cafe table">
+            <figcaption class="cap"><strong>The Tippet newsletter.</strong> A monthly publication of club news, member stories, events and fly fishing content.</figcaption>
+          </figure>
+          <figure class="fig" style="flex: 1 1 260px">
+            <img src="images/tippet-spread-mockup.jpg" alt="Open Tippet spread with the Events page and the Missouri River Outdoor Expo feature, read at a riverside campsite">
+            <figcaption class="cap"><strong>Inside spread.</strong> The events page and Expo feature, with meetings and outings as scannable date cards.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECT 02: THE CABIN JOURNAL ==================== -->
+  <section id="cabin-journal" class="sec sec-blush"aria-labelledby="h-cabin" style="--accent: #4E7D52">
     <div class="wrap">
       <div class="head">
         <div style="flex: 1 1 360px; min-width: 0">
-          <p class="num" aria-hidden="true">01</p>
-          <p class="kicker">PUBLICATION DESIGN</p>
+          <p class="num" aria-hidden="true">02</p>
+          <p class="kicker">PUBLICATION DESIGN <span class="ptype">· CLIENT WORK</span></p>
           <h2 id="h-cabin" class="h2">The Cabin Journal</h2>
           <div class="bar"></div>
           <p class="client">Client: Bighorn Mountain Cabin Owners Association</p>
@@ -196,21 +239,20 @@ html{scroll-behavior:smooth}
     </div>
   </section>
 
-  <!-- ==================== PROJECT 02: NEBRASKALAND MAGAZINE ==================== -->
-  <section id="nebraskaland" class="sec" aria-labelledby="h-nl" style="--accent: #E8722C">
+  <!-- ==================== PROJECT 03: NEBRASKALAND MAGAZINE ==================== -->
+  <section id="nebraskaland" class="sec sec-mist" aria-labelledby="h-nl" style="--accent: #E8722C">
     <div class="wrap">
       <div class="head" style="flex-direction: row-reverse">
         <div style="flex: 1 1 340px; min-width: 0">
-          <p class="num" aria-hidden="true">02</p>
-          <p class="kicker">EDITORIAL DESIGN</p>
-          <h2 id="h-nl" class="h2">Nebraskaland Magazine</h2>
+          <p class="num" aria-hidden="true">03</p>
+          <p class="kicker">EDITORIAL DESIGN <span class="ptype">· ACADEMIC PROJECT</span></p>
+          <h2 id="h-nl" class="h2">NebraskaLand Magazine</h2>
           <div class="bar"></div>
-          <p class="client">Client: Nebraska Game and Parks Commission</p>
           <p class="lede">An editorial redesign focused on stronger hierarchy, clearer organization and a more polished presentation, while keeping the publication's outdoor character.</p>
           <div class="chips"><span>Editorial design</span><span>Grid systems</span><span>Typography</span><span>Visual hierarchy</span></div>
         </div>
         <figure class="fig" style="flex: 1.6 1 520px">
-          <img src="images/nebraskaland-magazine-mockup.jpg" alt="A reader holding the redesigned Nebraskaland Magazine October 2025 issue">
+          <img src="images/nebraskaland-magazine-mockup.jpg" alt="A reader holding the redesigned NebraskaLand Magazine October 2025 issue">
           <figcaption class="cap"><strong>Magazine redesign.</strong> The October cover with stronger hierarchy, a clear grid and confident image placement.</figcaption>
         </figure>
       </div>
@@ -224,62 +266,56 @@ html{scroll-behavior:smooth}
           <figcaption class="cap"><strong>Promotional poster.</strong> Showcases featured content to attract readers.</figcaption>
         </figure>
         <figure class="fig" style="flex: 1 1 260px">
-          <div class="mat" style="background: #FFF3EA"><img src="images/nebraskaland-cover.jpg" alt="Flat view of the Nebraskaland October 2025 cover" style="width: 100%; height: auto"></div>
+          <div class="mat" style="background: #FFF3EA"><img src="images/nebraskaland-cover.jpg" alt="Flat view of the NebraskaLand October 2025 cover" style="width: 100%; height: auto"></div>
           <figcaption class="cap"><strong>The cover, up close.</strong> Masthead, cover lines and page callouts.</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROJECT 03: BLUE TREK OUTDOORS ==================== -->
-  <section id="bluetrek" class="sec sec-mist" aria-labelledby="h-bt" style="--accent: #2F6EAA">
-    <div class="wrap">
-      <div class="head">
-        <div style="flex: 1 1 360px; min-width: 0">
-          <p class="num" aria-hidden="true">03</p>
-          <p class="kicker">BRAND IDENTITY</p>
-          <h2 id="h-bt" class="h2">Blue Trek Outdoors</h2>
-          <div class="bar"></div>
-          <p class="client">Client: Blue Trek Outdoors</p>
-          <p class="lede">A refreshed outdoor brand identity created to feel adventurous, consistent and flexible across many applications.</p>
-          <div class="chips"><span>Brand identity</span><span>Logo development</span><span>Color systems</span><span>Brand applications</span></div>
-        </div>
-        <figure class="fig" style="flex: 1.6 1 520px">
-          <img src="images/bluetrek-brand-cover.jpg" alt="Blue Trek Outdoors brand identity and visual system cover with the logo and Lifetime of Adventures tagline" style="background: #FFFFFF">
-          <figcaption class="cap"><strong>Brand identity and visual system.</strong> The mission, tagline and primary logo that anchor the brand.</figcaption>
+  <!-- ==================== PROJECT 04: CARPAPALOOZA ==================== -->
+  <section id="carpapalooza" class="sec sec-dark" aria-labelledby="h-carp" style="--accent: #F2C230">
+    <div class="wrap" style="display: flex; flex-wrap: wrap-reverse; gap: 56px; align-items: center">
+      <div style="flex: 1.2 1 440px; min-width: 0; display: flex; gap: 24px; align-items: flex-end">
+        <figure class="fig" style="flex: 1.4 1 0">
+          <img src="images/carpapalooza-poster-mockup.jpg" alt="Carpapalooza Tour poster on a wooden post by a lakeside trail">
+          <figcaption class="cap"><strong>In the wild.</strong> Posted where anglers would see it.</figcaption>
+        </figure>
+        <figure class="fig" style="flex: 1 1 0">
+          <img src="images/carpapalooza-poster.jpg" alt="Flat view of the Carpapalooza Tour poster, July 11, 2026" style="border-radius: 4px">
+          <figcaption class="cap"><strong>The poster.</strong> Illustration, distressed type and a clear sign-up block.</figcaption>
         </figure>
       </div>
-      <div class="gal">
-        <figure class="fig" style="flex: 1.2 1 300px">
-          <img src="images/bluetrek-bottle-tag.jpg" alt="Blue Trek hang tag tied to a green water bottle at a river overlook">
-          <figcaption class="cap"><strong>Product hang tag.</strong> The brand on product, out where it would actually be used.</figcaption>
-        </figure>
-        <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-          <figure class="fig">
-            <img src="images/bluetrek-backpack.jpg" alt="Blue backpack with the white Blue Trek Outdoors logo on a rock overlooking a mountain lake">
-            <figcaption class="cap"><strong>Gear application.</strong> The reversed logo on a backpack, out on the trail.</figcaption>
-          </figure>
-          <figure class="fig">
-            <div class="mat"><img src="images/bluetrek-logo-system.jpg" alt="Blue Trek logo system: primary logo, secondary lockup, black, reversed and icon versions" style="width: 100%; height: auto; box-shadow: none"></div>
-            <figcaption class="cap"><strong>Logo system.</strong> Lockups, one-color versions and an icon mark.</figcaption>
-          </figure>
-        </div>
+      <div style="flex: 1 1 340px; min-width: 0">
+        <p class="num" aria-hidden="true">04</p>
+        <p class="kicker">POSTER DESIGN <span class="ptype">· CLIENT WORK</span></p>
+        <h2 id="h-carp" class="h2">Carpapalooza</h2>
+        <div class="bar"></div>
+        <p class="client">Client: Cornhusker Fly Fishers</p>
+        <p class="lede">A promotional event poster that builds interest in Carpapalooza and communicates the details in a fun, energetic and easy-to-read format.</p>
+        <div class="chips"><span>Poster design</span><span>Event promotion</span><span>Typography</span><span>Illustration integration</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROJECT 04: TROUT FIN RESORTS ==================== -->
-  <section id="trout-fin" class="sec sec-dark" aria-labelledby="h-tf" style="--accent: #F07468">
+  <!-- ==================== PROJECT 05: TROUT FIN RESORTS ==================== -->
+  <section id="trout-fin" class="sec sec-mist" aria-labelledby="h-tf" style="--accent: #F07468">
     <div class="wrap">
       <div class="head">
         <div style="flex: 1 1 360px; min-width: 0">
-          <p class="num" aria-hidden="true">04</p>
-          <p class="kicker">WEB DESIGN</p>
+          <p class="num" aria-hidden="true">05</p>
+          <p class="kicker">WEB DESIGN <span class="ptype">· ACADEMIC PROJECT</span></p>
           <h2 id="h-tf" class="h2">Trout Fin Resorts</h2>
           <div class="bar"></div>
-          <p class="client">Client: Trout Fin Resorts</p>
           <p class="lede">A responsive resort website that organizes fly fishing, lodging, packages, conservation and trip planning in a clear, inviting way.</p>
           <div class="chips"><span>Web design</span><span>Figma</span><span>Responsive design</span><span>Information architecture</span></div>
+          <figure class="fig" style="margin-top: 32px; max-width: 480px">
+            <div class="mat" style="gap: 28px; padding: 28px 32px">
+              <img src="images/troutfin-logo-color.png" alt="Trout Fin Resorts full-color logo: a spotted trout in front of mountains, pines and a river, above a serif wordmark" style="width: calc(50% - 14px); height: auto; box-shadow: none; border-radius: 0">
+              <img src="images/troutfin-logo-bw.png" alt="Trout Fin Resorts logo in black and white" style="width: calc(50% - 14px); height: auto; box-shadow: none; border-radius: 0">
+            </div>
+            <figcaption class="cap"><strong>Resort logo.</strong> The mark and wordmark in full color and black and white, designed as part of the identity and website.</figcaption>
+          </figure>
         </div>
         <figure class="fig" style="flex: 1.6 1 520px">
           <img src="images/troutfin-laptop.jpg" alt="Trout Fin Resorts home page on a laptop at a desk">
@@ -292,27 +328,62 @@ html{scroll-behavior:smooth}
           <figcaption class="cap"><strong>On a phone.</strong> The mobile site in real use.</figcaption>
         </figure>
         <figure class="fig" style="flex: 1 1 300px">
-          <div style="border-radius: 14px; overflow: hidden; aspect-ratio: 1 / 1; box-shadow: 0 18px 44px rgba(0,0,0,.45)"><img src="images/troutfin-fly-fishing-page.jpg" alt="Trout Fin Resorts fly fishing page with gear rental cards" style="height: 100%; object-fit: cover; object-position: 50% 0%; border-radius: 0; box-shadow: none"></div>
+          <div style="border-radius: 14px; overflow: hidden; aspect-ratio: 1 / 1; box-shadow: 0 18px 40px rgba(30,39,43,.16)"><img src="images/troutfin-fly-fishing-page.jpg" alt="Trout Fin Resorts fly fishing page with gear rental cards" style="height: 100%; object-fit: cover; object-position: 50% 0%; border-radius: 0; box-shadow: none"></div>
           <figcaption class="cap"><strong>Fly fishing page.</strong> Gear rental cards with pricing, photos and short descriptions.</figcaption>
         </figure>
         <figure class="fig" style="flex: 1 1 300px">
-          <div style="border-radius: 14px; overflow: hidden; aspect-ratio: 1 / 1; box-shadow: 0 18px 44px rgba(0,0,0,.45)"><img src="images/troutfin-mobile-screens.jpg" alt="Three Trout Fin Resorts mobile screens: home, fly fishing and lodging" style="height: 100%; object-fit: cover; object-position: 50% 0%; border-radius: 0; box-shadow: none"></div>
+          <div style="border-radius: 14px; overflow: hidden; aspect-ratio: 1 / 1; box-shadow: 0 18px 40px rgba(30,39,43,.16)"><img src="images/troutfin-mobile-screens.jpg" alt="Three Trout Fin Resorts mobile screens: home, fly fishing and lodging" style="height: 100%; object-fit: cover; object-position: 50% 0%; border-radius: 0; box-shadow: none"></div>
           <figcaption class="cap"><strong>Mobile screens.</strong> The same branding and structure adapted for small screens.</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROJECT 05: MISSOURI RIVER OUTDOOR EXPO ==================== -->
+  <!-- ==================== PROJECT 06: BLUETREK OUTDOORS ==================== -->
+  <section id="bluetrek" class="sec sec-blush"aria-labelledby="h-bt" style="--accent: #2F6EAA">
+    <div class="wrap">
+      <div class="head">
+        <div style="flex: 1 1 360px; min-width: 0">
+          <p class="num" aria-hidden="true">06</p>
+          <p class="kicker">BRAND IDENTITY <span class="ptype">· ACADEMIC PROJECT</span></p>
+          <h2 id="h-bt" class="h2">BlueTrek Outdoors</h2>
+          <div class="bar"></div>
+          <p class="lede">A refreshed outdoor brand identity created to feel adventurous, consistent and flexible across many applications.</p>
+          <div class="chips"><span>Brand identity</span><span>Logo development</span><span>Color systems</span><span>Brand applications</span></div>
+        </div>
+        <figure class="fig" style="flex: 1.6 1 520px">
+          <img src="images/bluetrek-brand-cover.jpg" alt="BlueTrek Outdoors brand identity and visual system cover with the logo and Lifetime of Adventures tagline" style="background: #FFFFFF">
+          <figcaption class="cap"><strong>Brand identity and visual system.</strong> The mission, tagline and primary logo that anchor the brand.</figcaption>
+        </figure>
+      </div>
+      <div class="gal">
+        <figure class="fig" style="flex: 1.2 1 300px">
+          <img src="images/bluetrek-bottle-tag.jpg" alt="BlueTrek hang tag tied to a green water bottle at a river overlook">
+          <figcaption class="cap"><strong>Product hang tag.</strong> The brand on product, out where it would actually be used.</figcaption>
+        </figure>
+        <div style="flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+          <figure class="fig">
+            <img src="images/bluetrek-backpack.jpg" alt="Blue backpack with the white BlueTrek Outdoors logo on a rock overlooking a mountain lake">
+            <figcaption class="cap"><strong>Gear application.</strong> The reversed logo on a backpack, out on the trail.</figcaption>
+          </figure>
+          <figure class="fig">
+            <div class="mat" style="background: var(--mist)"><img src="images/bluetrek-logo-system.jpg" alt="BlueTrek logo system: primary logo, secondary lockup, black, reversed and icon versions" style="width: 100%; height: auto; box-shadow: none"></div>
+            <figcaption class="cap"><strong>Logo system.</strong> Lockups, one-color versions and an icon mark.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECT 07: MISSOURI RIVER OUTDOOR EXPO ==================== -->
   <section id="expo" class="sec sec-mist" aria-labelledby="h-expo" style="--accent: #D9733A">
     <div class="wrap">
       <div class="head" style="flex-direction: row-reverse; align-items: center">
         <div style="flex: 1 1 360px; min-width: 0">
-          <p class="num" aria-hidden="true">05</p>
-          <p class="kicker">EVENT CAMPAIGN</p>
+          <p class="num" aria-hidden="true">07</p>
+          <p class="kicker">EVENT CAMPAIGN <span class="ptype">· ACADEMIC PROJECT</span></p>
           <h2 id="h-expo" class="h2">Missouri River Outdoor Expo</h2>
           <div class="bar"></div>
-          <p class="client">Client: Missouri River Outdoor Expo</p>
           <p class="lede">A promotional event campaign that organizes a large amount of information about activities, demonstrations, schedules and event details in a clear, engaging way.</p>
           <div class="chips"><span>Event promotion</span><span>Information hierarchy</span><span>Print design</span><span>Social media</span><span>Visual consistency</span></div>
         </div>
@@ -337,68 +408,6 @@ html{scroll-behavior:smooth}
     </div>
   </section>
 
-  <!-- ==================== PROJECT 06: THE TIPPET ==================== -->
-  <section id="tippet" class="sec" aria-labelledby="h-tippet" style="--accent: var(--teal)">
-    <div class="wrap">
-      <div class="head" style="align-items: flex-start">
-        <div style="flex: 1 1 360px; min-width: 0">
-          <p class="num" aria-hidden="true">06</p>
-          <p class="kicker">NEWSLETTER SYSTEM</p>
-          <h2 id="h-tippet" class="h2">The Tippet</h2>
-          <div class="bar"></div>
-          <p class="client">Client: Cornhusker Fly Fishers · Role: Editor and designer</p>
-          <p class="lede">A recurring digital newsletter and communication system that keeps members informed, promotes events and presents club stories in a clear, engaging format.</p>
-          <div class="chips"><span>Publication design</span><span>Editorial layout</span><span>Email communication</span><span>Social media</span></div>
-          <figure class="fig" style="margin-top: 32px">
-            <div style="background: var(--mist); border-left: 6px solid var(--teal); border-radius: 14px; padding: 22px 24px; font-size: 15px; line-height: 1.6">
-              <p style="margin: 0 0 12px; font-size: 13px; color: var(--gray); border-bottom: 1px solid #C9E6E8; padding-bottom: 10px">Subject: The October issue of The Tippet is ready!</p>
-              <p style="margin: 0 0 10px">Hi CFF Members,</p>
-              <p style="margin: 0 0 10px">This month's newsletter includes upcoming club events, member news, fly fishing stories and other updates from Cornhusker Fly Fishers.</p>
-              <p style="margin: 0 0 10px"><strong>Read the current issue here:</strong><br><span style="color: var(--teal-dark); text-decoration: underline">cornhuskerflyfishers.com/current-newsletter</span></p>
-              <p style="margin: 0">Tight lines,<br><strong>Tammy Goodwater</strong><br>Editor, The Tippet</p>
-            </div>
-            <figcaption class="cap"><strong>Monthly member email.</strong> Introduces each issue and gives members one-click access.</figcaption>
-          </figure>
-        </div>
-        <div style="flex: 1.6 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
-          <figure class="fig" style="flex: 1 1 260px">
-            <img src="images/tippet-cover-mockup.jpg" alt="A reader holding a printed issue of The Tippet, Volume 46 No. 9, at a cafe table">
-            <figcaption class="cap"><strong>The Tippet newsletter.</strong> A monthly publication of club news, member stories, events and fly fishing content.</figcaption>
-          </figure>
-          <figure class="fig" style="flex: 1 1 260px">
-            <img src="images/tippet-spread-mockup.jpg" alt="Open Tippet spread with the Events page and the Missouri River Outdoor Expo feature, read at a riverside campsite">
-            <figcaption class="cap"><strong>Inside spread.</strong> The events page and Expo feature, with meetings and outings as scannable date cards.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PROJECT 07: CARPAPALOOZA ==================== -->
-  <section id="carpapalooza" class="sec sec-dark" aria-labelledby="h-carp" style="--accent: #F2C230">
-    <div class="wrap" style="display: flex; flex-wrap: wrap-reverse; gap: 56px; align-items: center">
-      <div style="flex: 1.2 1 440px; min-width: 0; display: flex; gap: 24px; align-items: flex-end">
-        <figure class="fig" style="flex: 1.4 1 0">
-          <img src="images/carpapalooza-poster-mockup.jpg" alt="Carpapalooza Tour poster on a wooden post by a lakeside trail">
-          <figcaption class="cap"><strong>In the wild.</strong> Posted where anglers would see it.</figcaption>
-        </figure>
-        <figure class="fig" style="flex: 1 1 0">
-          <img src="images/carpapalooza-poster.jpg" alt="Flat view of the Carpapalooza Tour poster, July 11, 2026" style="border-radius: 4px">
-          <figcaption class="cap"><strong>The poster.</strong> Illustration, distressed type and a clear sign-up block.</figcaption>
-        </figure>
-      </div>
-      <div style="flex: 1 1 340px; min-width: 0">
-        <p class="num" aria-hidden="true">07</p>
-        <p class="kicker">POSTER DESIGN</p>
-        <h2 id="h-carp" class="h2">Carpapalooza</h2>
-        <div class="bar"></div>
-        <p class="client">Client: Cornhusker Fly Fishers</p>
-        <p class="lede">A promotional event poster that builds interest in Carpapalooza and communicates the details in a fun, energetic and easy-to-read format.</p>
-        <div class="chips"><span>Poster design</span><span>Event promotion</span><span>Typography</span><span>Illustration integration</span></div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==================== PROJECT 08: SELF-BRAND ==================== -->
   <section id="self-brand" class="sec sec-teal" aria-labelledby="h-sb" style="--accent: var(--charcoal); overflow: hidden">
     <svg viewBox="0 0 600 400" preserveAspectRatio="xMaxYMin meet" style="position: absolute; top: 0; right: 0; width: min(40vw, 560px); height: auto; pointer-events: none" aria-hidden="true">
@@ -409,17 +418,17 @@ html{scroll-behavior:smooth}
       <div class="head" style="align-items: flex-start">
         <div style="flex: 1 1 360px; min-width: 0">
           <p class="num" aria-hidden="true">08</p>
-          <p class="kicker">SELF-BRAND</p>
-          <h2 id="h-sb" class="h2">Résumé and business card</h2>
+          <p class="kicker">SELF-BRAND <span class="ptype">· PERSONAL IDENTITY</span></p>
+          <h2 id="h-sb" class="h2">Resume and business card</h2>
           <div class="bar"></div>
           <p class="lede" style="margin-bottom: 14px">A personal identity built to feel creative, dependable, organized and approachable. Teal adds personality and a recognizable accent, while charcoal, gray and white keep everything clean and easy to read.</p>
-          <p class="lede">One typeface, Helvetica, in several weights gives clear hierarchy. Strong alignment, white space and subtle geometric shapes tie the résumé and card into one system.</p>
-          <div class="chips"><span>Self-branding</span><span>Résumé design</span><span>Business cards</span><span>Typography</span></div>
+          <p class="lede">One typeface, Helvetica, in several weights gives clear hierarchy. Strong alignment, white space and subtle geometric shapes tie the resume and card into one system.</p>
+          <div class="chips"><span>Self-branding</span><span>Resume design</span><span>Business cards</span><span>Typography</span></div>
         </div>
         <div style="flex: 1.6 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
           <figure class="fig" style="flex: 1 1 260px">
-            <img src="images/resume-preview.jpg" alt="Tammy Goodwater résumé with teal geometric corners" style="border-radius: 4px; box-shadow: 0 22px 48px rgba(13,59,64,.35)">
-            <figcaption class="cap"><strong>Résumé.</strong> Two columns with a clear reading order.</figcaption>
+            <img src="images/resume-preview.jpg" alt="Tammy Goodwater resume with a teal geometric header, two columns and AI Tools listed under Tools" style="border-radius: 4px; box-shadow: 0 22px 48px rgba(13,59,64,.35)">
+            <figcaption class="cap"><strong>Resume.</strong> Two columns with a clear reading order.</figcaption>
           </figure>
           <div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
             <figure class="fig">
@@ -428,7 +437,7 @@ html{scroll-behavior:smooth}
             </figure>
             <figure class="fig">
               <img src="images/business-card-back.jpg" alt="Business card back with email, phone and LinkedIn" style="border-radius: 6px; box-shadow: 0 18px 40px rgba(13,59,64,.35)">
-              <figcaption class="cap"><strong>Business card, back.</strong> Same type, color and spacing as the résumé.</figcaption>
+              <figcaption class="cap"><strong>Business card, back.</strong> Same type, color and spacing as the resume.</figcaption>
             </figure>
           </div>
         </div>
@@ -441,7 +450,7 @@ html{scroll-behavior:smooth}
     <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
       <div style="flex: 1 1 320px; min-width: 0; max-width: 440px">
         <p class="kicker">ABOUT</p>
-        <h2 id="h-about" class="h2">Clear, thoughtful visual communication</h2>
+        <h2 id="h-about" class="h2">Clarity by design</h2>
         <div class="bar" style="background: var(--teal)"></div>
       </div>
       <div style="flex: 2 1 460px; min-width: 0">
@@ -454,7 +463,7 @@ html{scroll-behavior:smooth}
           </div>
           <div style="flex: 1 1 220px; min-width: 0; background: var(--mist); border-top: 6px solid var(--charcoal); border-radius: 14px; padding: 22px 24px">
             <h3 style="margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--teal-dark)">TOOLS</h3>
-            <p style="margin: 0; font-size: 16px">Adobe InDesign<br>Adobe Illustrator<br>Adobe Photoshop<br>Figma · Canva</p>
+            <p style="margin: 0; font-size: 16px">Adobe InDesign<br>Adobe Illustrator<br>Adobe Photoshop<br>Figma · Canva<br>AI Tools</p>
           </div>
         </div>
       </div>
@@ -472,16 +481,16 @@ html{scroll-behavior:smooth}
       <div style="max-width: 680px; padding-bottom: 56px">
         <p class="kicker" style="color: var(--teal-light)">CONTACT</p>
         <h2 id="h-contact" style="margin: 0 0 14px; font-weight: 700; font-size: clamp(40px, 5.4vw, 68px); line-height: 1; letter-spacing: -1.5px">Let's talk.</h2>
-        <p style="margin: 0 0 30px; font-size: 19px; color: var(--gray-light)">I'm open to graphic design roles and freelance projects. My full résumé is one click away.</p>
+        <p style="margin: 0 0 30px; font-size: 19px; color: var(--gray-light)">I'm open to graphic design roles and freelance projects. My full resume is one click away.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 12px">
-          <a id="resume" href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="background: var(--teal); color: var(--charcoal)">Download résumé (PDF)</a>
+          <a id="resume" href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="background: var(--teal); color: var(--charcoal)">Download resume (PDF)</a>
           <a href="mailto:tlgoodwater@gmail.com" class="btn" style="border: 2px solid #FFFFFF; color: #FFFFFF">Email me</a>
         </div>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding-top: 24px; border-top: 1px solid #37474F; font-size: 14px; color: var(--gray-light); max-width: 760px">
         <span>© 2026 Tammy Goodwater</span>
         <a href="mailto:tlgoodwater@gmail.com" style="color: var(--gray-light)">tlgoodwater@gmail.com</a>
-        <a href="https://www.linkedin.com/in/tammy-goodwater" style="color: var(--gray-light)">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/tammy-goodwater-design" style="color: var(--gray-light)">LinkedIn</a>
         <span>Omaha, Nebraska</span>
       </div>
     </div>
