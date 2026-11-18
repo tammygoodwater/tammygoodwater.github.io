@@ -81,6 +81,9 @@ html{scroll-behavior:smooth}
 .p5{grid-column:4/5;grid-row:3/5}.p6{grid-column:1/2;grid-row:3/5}.p7{grid-column:2/3;grid-row:3/5}.p8{grid-column:3/4;grid-row:4/5}
 }
 @media (max-width:560px){.bento{grid-template-columns:minmax(0,1fr)}.t-big,.t-wide{grid-column:span 1}}
+.copy-btn{min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--teal-light);background:transparent;color:var(--teal-light);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.copy-btn:hover{background:var(--teal-light);color:var(--charcoal)}
+.copy-btn:focus-visible,.btn:focus-visible{outline:3px solid var(--teal-light);outline-offset:3px}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes f1{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-9px)}}
 @keyframes f2{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-7px)}}
@@ -486,6 +489,12 @@ html{scroll-behavior:smooth}
           <a id="resume" href="Tammy_Goodwater_Resume.pdf" download="Tammy_Goodwater_Resume.pdf" class="btn" style="background: var(--teal); color: var(--charcoal)">Download resume (PDF)</a>
           <a href="mailto:tlgoodwater@gmail.com" class="btn" style="border: 2px solid #FFFFFF; color: #FFFFFF">Email me</a>
         </div>
+        <!-- Email address shown in full, with a Copy button for people who use webmail (Gmail, Yahoo and so on) -->
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 22px">
+          <a href="mailto:tlgoodwater@gmail.com" style="color: #FFFFFF; font-size: 18px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px">tlgoodwater@gmail.com</a>
+          <button type="button" id="copy-email" class="copy-btn" data-email="tlgoodwater@gmail.com">Copy email</button>
+          <span id="copy-status" role="status" aria-live="polite" style="font-size: 14px; color: var(--teal-light)"></span>
+        </div>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding-top: 24px; border-top: 1px solid #37474F; font-size: 14px; color: var(--gray-light); max-width: 760px">
         <span>© 2026 Tammy Goodwater</span>
@@ -496,5 +505,41 @@ html{scroll-behavior:smooth}
     </div>
   </section>
 </div>
+<script>
+/* "Copy email" button: copies the address so people can paste it into any email app or webmail. */
+(function () {
+  var btn = document.getElementById('copy-email');
+  if (!btn) return;
+  var status = document.getElementById('copy-status');
+  var email = btn.getAttribute('data-email');
+  var timer;
+  function done(ok) {
+    btn.textContent = ok ? 'Copied' : 'Copy email';
+    status.textContent = ok ? 'Copied! Paste it into any email.' : 'Press and hold the address to copy it.';
+    clearTimeout(timer);
+    timer = setTimeout(function () { btn.textContent = 'Copy email'; status.textContent = ''; }, 4000);
+  }
+  function fallback() {
+    var t = document.createElement('textarea');
+    t.value = email;
+    t.setAttribute('readonly', '');
+    t.style.position = 'fixed';
+    t.style.opacity = '0';
+    document.body.appendChild(t);
+    t.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(t);
+    done(ok);
+  }
+  btn.addEventListener('click', function () {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(function () { done(true); }, fallback);
+    } else {
+      fallback();
+    }
+  });
+})();
+</script>
 </body>
 </html>
