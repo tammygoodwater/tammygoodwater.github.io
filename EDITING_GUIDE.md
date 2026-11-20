@@ -4,9 +4,11 @@ This folder holds everything for your portfolio website.
 
 | File or folder | What it is |
 | --- | --- |
-| `index.html` | The whole portfolio page. Open it in Chrome to preview. |
+| `index.html` | The home page: headline, project grid, About and Contact. Open it in Chrome to preview. |
+| `work/` | One page per project (for example, `work/the-tippet.html`). The grid tiles on the home page link here. |
+| `styles.css` | The shared look for every page, including your brand colors. |
 | `images/` | Every project image, named by project (for example, `troutfin-laptop.jpg`). |
-| `Tammy_Goodwater_Resume.pdf` | The résumé your Download buttons point to. |
+| `Tammy_Goodwater_Resume.pdf` | The resume your Download buttons point to. |
 | `Figma_Import_Tammy_Goodwater_Portfolio.html` | A single-file copy with images built in, for importing into Figma. |
 
 ---
@@ -28,21 +30,23 @@ This folder holds everything for your portfolio website.
 
 ## Make quick changes yourself
 
-Open `index.html` in a plain text editor. Use **TextEdit** on Mac (Format → Make Plain Text) or **Notepad** on Windows. **VS Code** (free) is even better because it color-codes everything.
+Open the page you want to change in a plain text editor: `index.html` for the home page, or a file in `work/` for a project. Use **TextEdit** on Mac (Format → Make Plain Text) or **Notepad** on Windows. **VS Code** (free) is even better because it color-codes everything.
 
-**Find a section:** every part of the page starts with a labeled line like this:
-`<!-- ==================== PROJECT 05: MISSOURI RIVER OUTDOOR EXPO ==================== -->`
+**Find a section:** every part of a page starts with a labeled line like this:
+`<!-- ==================== PROJECT 06: MISSOURI RIVER OUTDOOR EXPO ==================== -->`
 Search (Ctrl+F or Cmd+F) for the project name to jump straight there.
+
+**Rename a project:** change its name in its own page in `work/`, and in its grid tile in `index.html`.
 
 **Change words:** edit the text between the tags. Leave everything inside `< >` alone.
 
 **Swap an image (easiest):** save your new image into `images/` with the **same file name** as the old one. That replaces it everywhere, with no code changes.
 
-**Use a new image file name:** find the old name in `index.html` (for example `images/expo-poster.jpg`) and change it to your new file name. Also update the `alt="..."` text next to it so screen readers describe the new image.
+**Use a new image file name:** find the old name in the page (for example `images/expo-poster.jpg`) and change it to your new file name. Also update the `alt="..."` text next to it so screen readers describe the new image.
 
-**Change brand colors:** near the top of `index.html`, look for **EDIT YOUR BRAND COLORS HERE**. Change a hex code once, like `--teal:#00B2BD;`, and it updates across the whole page. The angled shapes behind the hero and contact sections have their own colors in `fill="..."`.
+**Change brand colors:** at the top of `styles.css`, look for **EDIT YOUR BRAND COLORS HERE**. Change a hex code once, like `--teal:#00B2BD;`, and it updates across every page. The angled shapes behind the hero and contact sections have their own colors in `fill="..."`.
 
-**Replace your résumé:** save the new PDF into this folder as `Tammy_Goodwater_Resume.pdf`.
+**Replace your resume:** save the new PDF into this folder as `Tammy_Goodwater_Resume.pdf`.
 
 **Tips**
 - Save a copy of the folder before big edits, so you can always go back.
